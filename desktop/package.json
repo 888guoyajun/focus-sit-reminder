@@ -1,6 +1,6 @@
 {
   "name": "focus-sit-reminder-desktop",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "专注久坐提醒器桌面右下角提醒端",
   "main": "main.js",
   "scripts": {
@@ -28,11 +28,11 @@
     "mac": {
       "category": "public.app-category.healthcare-fitness",
       "target": ["dmg"],
-      "artifactName": "专注提醒器-${version}-mac.${ext}"
+      "artifactName": "focus-sit-reminder-${version}-mac.${ext}"
     },
     "win": {
       "target": ["nsis"],
-      "artifactName": "专注提醒器-${version}-win.${ext}"
+      "artifactName": "focus-sit-reminder-${version}-win.${ext}"
     },
     "nsis": {
       "oneClick": false,
