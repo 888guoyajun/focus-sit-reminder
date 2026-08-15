@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+release/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env
+.env
+.encryption_key
