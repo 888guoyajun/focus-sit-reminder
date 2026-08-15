@@ -1,0 +1,48 @@
+{
+  "name": "focus-sit-reminder-desktop",
+  "version": "0.1.0",
+  "description": "专注久坐提醒器桌面右下角提醒端",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac dmg --win nsis",
+    "dist:mac": "electron-builder --mac dmg",
+    "dist:win": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "cn.guoge.focusreminder",
+    "productName": "专注提醒器",
+    "asar": true,
+    "compression": "maximum",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.js",
+      "style.css"
+    ],
+    "mac": {
+      "category": "public.app-category.healthcare-fitness",
+      "target": ["dmg"],
+      "artifactName": "专注提醒器-${version}-mac.${ext}"
+    },
+    "win": {
+      "target": ["nsis"],
+      "artifactName": "专注提醒器-${version}-win.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "专注提醒器"
+    },
+    "directories": {
+      "output": "release"
+    }
+  }
+}
